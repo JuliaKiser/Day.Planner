@@ -65,8 +65,8 @@ var saveBtn = document.querySelector(".save");
 
 $(".save").on('click',function(event) {
     event.preventDefault();
-    var theTime = $(this).siblings(".event").attr("id");
-    var maryPoppins = $(this).siblings(".event").attr(val());
+    var theTime = $(this).siblings(".description").val();
+    var maryPoppins = $(this).parent.attr("id");
     localStorage.setItem(theTime,maryPoppins);
     console.log(theTime);
     console.log(maryPoppins);
