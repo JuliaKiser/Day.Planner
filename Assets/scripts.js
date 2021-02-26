@@ -25,32 +25,25 @@ $(".time-block").each(function(){
     }
 })
 
-
 //Save Button Event Listener and Function
-
-//var saveBtn = document.querySelector(".save");
-
 $(document).on('click',".saveBtn", function(event) {
     event.preventDefault();
     var note = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
     localStorage.setItem(time,note);
-    console.log(note);
-    console.log(time);
 })
 
-//create ability to store locally
-$('#hours-8am').val(localStorage.getItem("hours-8"))
-$('#hours-9').val(localStorage.getItem("hours-9"))
-$('#hours-10').val(localStorage.getItem("hours-10"))
-$('#hours-11').val(localStorage.getItem("hours-11"))
-$('#hours-12').val(localStorage.getItem("hours-12"))
-$('#hours-13').val(localStorage.getItem("hours-1"))
-$('#hours-14').val(localStorage.getItem("hours-2"))
-$('#hours-15').val(localStorage.getItem("hours-3"))
-$('#hours-16').val(localStorage.getItem("hours-4"))
-$('#hours-17').val(localStorage.getItem("hours-5"))
-$('#hours-18').val(localStorage.getItem("hours-6"))
-$('#hours-19').val(localStorage.getItem("hours-7"))
-$('#hours-20').val(localStorage.getItem("hours-8pm"))
-
+//create ability to store locally and still be able to refresh and keep the information
+$('#hours-8 .description').val(localStorage.getItem("hours-8"))
+$('#hours-9 .description').val(localStorage.getItem("hours-9"))
+$('#hours-10 .description').val(localStorage.getItem("hours-10"))
+$('#hours-11 .description').val(localStorage.getItem("hours-11"))
+$('#hours-12 .description').val(localStorage.getItem("hours-12"))
+$('#hours-13 .description').val(localStorage.getItem("hours-1"))
+$('#hours-14 .description').val(localStorage.getItem("hours-2"))
+$('#hours-15 .description').val(localStorage.getItem("hours-3"))
+$('#hours-16 .description').val(localStorage.getItem("hours-4"))
+$('#hours-17 .description').val(localStorage.getItem("hours-5"))
+$('#hours-18 .description').val(localStorage.getItem("hours-6"))
+$('#hours-19 .description').val(localStorage.getItem("hours-7"))
+$('#hours-20 .description').val(localStorage.getItem("hours-8pm"))
